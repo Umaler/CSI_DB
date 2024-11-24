@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SQLite_Test" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/SQLite_Test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/SQLite_Test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++20" />
+			<Add option="-std=c17" />
+			<Add option="`pkg-config --cflags gtkmm-4.0`" />
+		</Compiler>
+		<Linker>
+			<Add option="`pkg-config --libs gtkmm-4.0`" />
+			<Add option="`pkg-config --libs sqlitecpp`" />
+			<Add library="sqlite3" />
+			<Add library="sfml-network" />
+			<Add library="sfml-window" />
+			<Add library="sfml-system" />
+			<Add library="epoxy" />
+		</Linker>
+		<Unit filename="DataSet.cpp" />
+		<Unit filename="DataSet.hpp" />
+		<Unit filename="DataSources/DBPhaseDiffSource.cpp" />
+		<Unit filename="DataSources/DBPhaseDiffSource.hpp" />
+		<Unit filename="DataSources/DBSource.cpp" />
+		<Unit filename="DataSources/DBSource.hpp" />
+		<Unit filename="DataSources/DataSource.hpp" />
+		<Unit filename="DataSources/RTPhaseDiffSource.cpp" />
+		<Unit filename="DataSources/RTPhaseDiffSource.hpp" />
+		<Unit filename="DataSources/RTSource.cpp" />
+		<Unit filename="DataSources/RTSource.hpp" />
+		<Unit filename="GUI/ChooserPanel.cpp" />
+		<Unit filename="GUI/ChoosersPanel.hpp" />
+		<Unit filename="GUI/DataSourcePlotWindow.cpp" />
+		<Unit filename="GUI/DataSourcePlotWindow.hpp" />
+		<Unit filename="GUI/ExtendablePlot.cpp" />
+		<Unit filename="GUI/ExtendablePlot.hpp" />
+		<Unit filename="GUI/FieldChooser.cpp" />
+		<Unit filename="GUI/FieldChooser.hpp" />
+		<Unit filename="GUI/MainWindow.cpp" />
+		<Unit filename="GUI/MainWindow.hpp" />
+		<Unit filename="GUI/OpenGL/Shader.cpp" />
+		<Unit filename="GUI/OpenGL/Shader.hpp" />
+		<Unit filename="GUI/PortSelector.cpp" />
+		<Unit filename="GUI/PortSelector.hpp" />
+		<Unit filename="csi_fun.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="csi_fun.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="utils/Boundaries.hpp" />
+		<Unit filename="utils/DBDescriptor.cpp" />
+		<Unit filename="utils/DBDescriptor.hpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
